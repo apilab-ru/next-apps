@@ -1,0 +1,75 @@
+@import '../assets/fonts/style.css';
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: radial-gradient(circle at 50% 0%, #182235 0%, #0b111b 45%);
+  min-height: 100vh;
+}
+
+:root {
+  font-family: var(--font-manrope);
+
+  /* Background */
+  --color-bg: #0b111b;
+  --color-bg-secondary: #101824;
+
+  /* Surfaces */
+  --color-surface: #111a27;
+  --color-surface-hover: #162131;
+
+  /* Borders */
+  --color-border: #263142;
+  --color-border-hover: #3c4a60;
+
+  /* Brand */
+  --color-primary: #6c4dff;
+  --color-primary-hover: #8066ff;
+  --color-primary-active: #5a3de0;
+
+  /* Text */
+  --color-text-primary: #f4f5f7;
+  --color-text-secondary: #aab3c2;
+  --color-text-muted: #6f7b8d;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 12px 0;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 28px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    background: var(--color-primary-hover);
+  }
+}
+
+.button {
+  background: none;
+  color: var(--color-text-secondary);
+  box-shadow: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 12px 26px;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-border-hover);
+  }
+
+  &:active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}

@@ -1,0 +1,80 @@
+.about-stat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  color: var(--color-text-primary);
+
+  &__item {
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid #1e2736;
+    align-items: center;
+    padding: 4px 18px;
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 3px 3px 6px #1e2736;
+    }
+  }
+
+  &__icon {
+    font-size: 28px;
+    color: var(--color-primary);
+    margin-right: 12px;
+    margin-top: 4px;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1em;
+  }
+
+  &__tooltip {
+    background: var(--color-bg-secondary, #333);
+    color: var(--color-text-primary, #fff);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre-line;
+    max-width: 260px;
+    z-index: 1000;
+    box-shadow: 3px 3px 6px #1e2736;
+    border: 1px solid var(--color-text-primary);
+
+    animation: tooltip-fade-in 0.2s ease-out;
+
+    &[data-state='closed'] {
+      animation: tooltip-fade-out 0.15s ease-in;
+    }
+  }
+}
+
+@keyframes tooltip-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tooltip-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(4px) scale(0.96);
+  }
+}
