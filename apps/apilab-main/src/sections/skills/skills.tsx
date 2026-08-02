@@ -47,7 +47,12 @@ export function Skills() {
         ))}
       </div>
 
-      <div className={`skills__second ${isOpen ? '--opened' : ''}`}>
+      <div
+        className={`skills__second ${isOpen ? '--opened' : ''}`}
+        id="other-skills"
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+      >
         <div className="skills__row">
           {otherSkills.map((item) => (
             <div className="skills__item" key={item.class}>
@@ -63,6 +68,9 @@ export function Skills() {
 
       <button
         className="button skills__control"
+        type="button"
+        aria-expanded={isOpen}
+        aria-controls="other-skills"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? 'Основные навыки' : 'Больше навыков'}
