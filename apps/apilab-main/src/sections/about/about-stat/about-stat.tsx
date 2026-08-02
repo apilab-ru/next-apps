@@ -41,7 +41,7 @@ export function AboutStat() {
       {stats.map((item) => (
         <Tooltip.Root key={item.icon}>
           <Tooltip.Trigger asChild>
-            <div className="about-stat__item">
+            <div className="about-stat__item" tabIndex={0}>
               <div className={'about-stat__icon icon-' + item.icon}></div>
               <div>
                 <div className="about-stat__title">{item.title}</div>
@@ -52,8 +52,13 @@ export function AboutStat() {
             </div>
           </Tooltip.Trigger>
           <Tooltip.Portal>
-            <Tooltip.Content className="about-stat__tooltip" sideOffset={8}>
+            <Tooltip.Content
+              className="about-stat__tooltip"
+              side="top"
+              sideOffset={10}
+            >
               {item.hint}
+              <Tooltip.Arrow className="about-stat__tooltip-arrow" />
             </Tooltip.Content>
           </Tooltip.Portal>
         </Tooltip.Root>
