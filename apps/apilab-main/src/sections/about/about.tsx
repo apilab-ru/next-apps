@@ -3,7 +3,7 @@ import AboutStat from './about-stat/about-stat';
 
 export function About() {
   return (
-    <div className="about">
+    <section className="about" id="about" data-scroll-section>
       <h2 className="section-title">Обо мне</h2>
       <div className="about__container">
         <p className="about__text">
@@ -16,7 +16,7 @@ export function About() {
 
         <AboutStat />
       </div>
-    </div>
+    </section>
   );
 }
 

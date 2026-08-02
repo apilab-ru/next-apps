@@ -4,6 +4,7 @@ import Menu from '@/sections/menu/menu';
 import About from '@/sections/about/about';
 import Skills from '@/sections/skills/skills';
 import Experience from '@/sections/experience/experience';
+import Footer from '@/sections/footer/footer';
 
 export default function Index() {
   /*
@@ -18,6 +19,7 @@ export default function Index() {
       <About />
       <Skills />
       <Experience />
+      <Footer />
     </div>
   );
 }
