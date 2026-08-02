@@ -17,7 +17,7 @@ const links = [
 
 export function Intro() {
   return (
-    <section className="intro">
+    <section className="intro" id="intro" data-scroll-section>
       <div className="intro__main">
         <div className="intro__text-container">
           <div className="intro__text">
