@@ -3,15 +3,32 @@
   max-width: 1280px;
   margin: 0 auto;
 
+  @media (max-width: 1328px) {
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 48px;
+  }
+
   &__text {
     max-width: 480px;
+
+    @media (max-width: 640px) {
+      max-width: none;
+      margin: 28px 0 0;
+      color: var(--color-text-secondary);
+      font-size: 13px;
+      line-height: 1.65;
+    }
   }
 
   &__container {
     display: flex;
-  }
-}
 
-.about-stat {
-  margin-left: 140px;
+    @media (max-width: 640px) {
+      display: block;
+    }
+  }
 }

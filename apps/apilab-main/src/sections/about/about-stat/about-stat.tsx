@@ -56,6 +56,7 @@ export function AboutStat() {
               className="about-stat__tooltip"
               side="top"
               sideOffset={10}
+              collisionPadding={16}
             >
               {item.hint}
               <Tooltip.Arrow className="about-stat__tooltip-arrow" />
