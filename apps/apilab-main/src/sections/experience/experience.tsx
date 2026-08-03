@@ -1,46 +1,46 @@
-import './experience.scss';
+'use client';
 
-const EXP = [
-  {
-    company: 'Т Банк',
-    position: 'Ведущий разработчик',
-    description: [
-      'Проектирование архитектуры и разработка корпоративных банковских приложений.',
-      'Разработка платформенных решений и внутренних библиотек.',
-      'Архитектурные решения для Angular/Nx микрофронтендов.',
-      'Code Review, техническое лидерство и менторство разработчиков.',
-      'Оптимизация производительности и качества кода.',
-      'Реализация сложной бизнес-логики и динамических форм.',
-    ],
-  },
-  {
-    company: 'SkillBox',
-    position: 'Ведущий разработчик',
-    description: [
-      'Разработка образовательной платформы.',
-        'Проектирование и развитие frontend-архитектуры.',
-        'Реализация сложных пользовательских сценариев.',
-        'Оптимизация производительности и пользовательского опыта.',
-        'Code review и участие в технических решениях.',
-    ],
-    from: '',
-    to: ''
-  },
-];
+import { useState } from 'react';
+import './experience.scss';
+import { EXTRA_EXPERIENCE, PREVIEW_EXPERIENCE } from './model';
+import ExperienceItem from './experience-item';
 
 export function Experience() {
-  return (
-    <div className={'experience'}>
-      <h2 className="section-title">Опыт работы</h2>
-      <div>
-        {EXP.map((item) => (
-          <div key={item.company} className="experience__item">
+  const [isExpanded, setIsExpanded] = useState(false);
 
-          </div>
+  return (
+    <section className="experience" id="experience" data-scroll-section>
+      <h2 className="section-title">Опыт работы</h2>
+      <div className={`experience__list${isExpanded ? ' --expanded' : ''}`}>
+        {PREVIEW_EXPERIENCE.map((item) => (
+          <ExperienceItem item={item} key={item.company} />
         ))}
+        <div
+          id="extra-experience"
+          className={`experience__extra${isExpanded ? ' --expanded' : ''}`}
+          aria-hidden={!isExpanded}
+        >
+          <div className="experience__extra-content">
+            {EXTRA_EXPERIENCE.map((item) => (
+              <ExperienceItem
+                item={item}
+                isHidden={!isExpanded}
+                key={item.company}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-      <button className="button">Смотреть весь опыт</button>
-    </div>
+      <button
+        className="button experience__control"
+        type="button"
+        aria-expanded={isExpanded}
+        aria-controls="extra-experience"
+        onClick={() => setIsExpanded((value) => !value)}
+      >
+        {isExpanded ? 'Скрыть' : 'Смотреть весь опыт'}
+      </button>
+    </section>
   );
 }
 
