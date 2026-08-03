@@ -12,7 +12,7 @@ const stats: AboutStat[] = [
   {
     title: '12+',
     description: 'лет опыта',
-    hint: '12+ лет коммерческого\nопыта',
+    hint: '12+ лет коммерческого опыта.',
     icon: 'briefcase',
   },
   {
@@ -30,7 +30,7 @@ const stats: AboutStat[] = [
   {
     title: 'Сложные',
     description: 'кейсы',
-    hint: 'Не боюсь сложных кейсов',
+    hint: 'Не боюсь сложных кейсов.',
     icon: 'stack',
   },
 ];
@@ -44,9 +44,18 @@ export function AboutStat() {
             <div className="about-stat__item" tabIndex={0}>
               <div className={'about-stat__icon icon-' + item.icon}></div>
               <div>
-                <div className="about-stat__title">{item.title}</div>
-                <div className="about-stat__description">
+                <div className="about-stat__title">
+                  {item.title}
+                  <span className="about-stat__title-description">
+                    {' '}
+                    {item.description}
+                  </span>
+                </div>
+                <div className="about-stat__description about-stat__description--short">
                   {item.description}
+                </div>
+                <div className="about-stat__description about-stat__description--mobile">
+                  {item.hint}
                 </div>
               </div>
             </div>
