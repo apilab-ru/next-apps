@@ -4,7 +4,9 @@ import Menu from '@/sections/menu/menu';
 import About from '@/sections/about/about';
 import Skills from '@/sections/skills/skills';
 import Experience from '@/sections/experience/experience';
+import Portfolio from '@/sections/portfolio/portfolio';
 import Footer from '@/sections/footer/footer';
+import ScrollHashSync from '@/sections/scroll-hash-sync/scroll-hash-sync';
 
 export default function Index() {
   /*
@@ -15,10 +17,12 @@ export default function Index() {
   return (
     <div className={styles.page}>
       <Menu />
+      <ScrollHashSync />
       <Intro />
       <About />
       <Skills />
       <Experience />
+      <Portfolio />
       <Footer />
     </div>
   );
