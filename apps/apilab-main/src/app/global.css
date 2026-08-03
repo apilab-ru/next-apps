@@ -38,6 +38,7 @@ body {
   /* Background */
   --color-bg: #0b111b;
   --color-bg-secondary: #101824;
+  --color-bg-translucent: #0b111b73;
 
   /* Surfaces */
   --color-surface: #111a27;
@@ -46,16 +47,26 @@ body {
   /* Borders */
   --color-border: #263142;
   --color-border-hover: #3c4a60;
+  --color-border-translucent: rgba(60, 74, 96, 0.34);
 
   /* Brand */
   --color-primary: #6c4dff;
   --color-primary-hover: #8066ff;
   --color-primary-active: #5a3de0;
+  --color-primary-translucent: rgba(108, 77, 255, 0.12);
 
   /* Text */
   --color-text-primary: #f4f5f7;
   --color-text-secondary: #aab3c2;
   --color-text-muted: #6f7b8d;
+
+  /* Effects */
+  --color-shadow-soft: rgba(3, 7, 12, 0.18);
+  --color-shadow-navigation: rgba(3, 7, 12, 0.3);
+  --color-shadow-medium: rgba(0, 0, 0, 0.28);
+  --color-shadow-strong: rgba(0, 0, 0, 0.6);
+  --color-overlay: rgba(3, 7, 12, 0.78);
+  --color-overlay-transparent: rgba(3, 7, 12, 0);
 }
 
 .section-title {

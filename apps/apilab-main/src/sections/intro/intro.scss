@@ -1,5 +1,5 @@
 .intro {
-  color: #f3f3f3;
+  color: var(--color-text-primary);
   position: relative;
 
   &__main {
@@ -130,7 +130,7 @@
     cursor: pointer;
     transition: 0.2s;
     display: inline-block;
-    color: #fff;
+    color: var(--color-text-primary);
     text-decoration: none;
 
     @media (max-width: 640px) {
