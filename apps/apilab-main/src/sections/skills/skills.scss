@@ -3,6 +3,11 @@
   max-width: 1280px;
   margin: 40px auto 0;
 
+  @media (max-width: 1328px) {
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+
   &__item {
     width: 80px;
     text-align: center;
