@@ -8,13 +8,26 @@
     margin-left: 24px;
   }
 
+  @media (max-width: 640px) {
+    margin: 48px 24px 0;
+  }
+
   &__item {
     width: 80px;
     text-align: center;
     transition: 0.5s;
 
+    @media (max-width: 640px) {
+      width: auto;
+      min-width: 0;
+    }
+
     &:hover {
       transform: scale(1.2);
+
+      @media (max-width: 640px) {
+        transform: none;
+      }
     }
   }
 
@@ -22,12 +35,21 @@
     display: block;
     width: fit-content;
     margin: 16px auto;
+
+    @media (max-width: 640px) {
+      margin: 24px auto 0;
+    }
   }
 
   &__icon {
     width: 45px;
     height: 45px;
     transition: 0.3s;
+
+    @media (max-width: 640px) {
+      width: 38px;
+      height: 38px;
+    }
 
     &.--angular {
       color: #dd0031;
@@ -44,6 +66,11 @@
       padding: 2px;
       width: 41px;
       height: 41px;
+
+      @media (max-width: 640px) {
+        width: 35px;
+        height: 35px;
+      }
 
       .skills__item:hover & {
         @media (min-width: 1280px) {
@@ -125,6 +152,23 @@
     justify-content: center;
     gap: 40px;
     margin: 18px;
+
+    @media (max-width: 640px) {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px 12px;
+      margin: 28px 0 20px;
+    }
+  }
+
+  &__title {
+    @media (max-width: 640px) {
+      margin-top: 6px;
+      overflow-wrap: anywhere;
+      color: var(--color-text-secondary);
+      font-size: 12px;
+      line-height: 1.35;
+    }
   }
 
   &__second {
@@ -132,64 +176,22 @@
     transition: 0.6s;
     overflow: hidden;
 
+    @media (max-width: 640px) {
+      transition: max-height 0.55s ease;
+    }
+
     &.--opened {
       max-height: 100px;
-    }
-  }
-}
 
-@media (max-width: 640px) {
-  .skills {
-    margin: 48px 24px 0;
-
-    &__row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px 12px;
-      margin: 28px 0 20px;
-    }
-
-    &__item {
-      width: auto;
-      min-width: 0;
-
-      &:hover {
-        transform: none;
-      }
-    }
-
-    &__icon {
-      width: 38px;
-      height: 38px;
-
-      &.--nextdotjs {
-        width: 35px;
-        height: 35px;
-      }
-    }
-
-    &__title {
-      margin-top: 6px;
-      overflow-wrap: anywhere;
-      color: var(--color-text-secondary);
-      font-size: 12px;
-      line-height: 1.35;
-    }
-
-    &__second {
-      transition: max-height 0.55s ease;
-
-      &.--opened {
+      @media (max-width: 640px) {
         max-height: 480px;
       }
-
-      .skills__row {
-        margin-top: 8px;
-      }
     }
 
-    &__control {
-      margin: 24px auto 0;
+    .skills__row {
+      @media (max-width: 640px) {
+        margin-top: 8px;
+      }
     }
   }
 }

@@ -14,6 +14,10 @@ html {
 
 [data-scroll-section] {
   scroll-margin-top: 140px;
+
+  @media (max-width: 640px) {
+    scroll-margin-top: 24px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22,13 +26,9 @@ html {
   }
 }
 
-@media (max-width: 640px) {
-  body {
+body {
+  @media (max-width: 640px) {
     padding-bottom: calc(58px + env(safe-area-inset-bottom));
-  }
-
-  [data-scroll-section] {
-    scroll-margin-top: 24px;
   }
 }
 

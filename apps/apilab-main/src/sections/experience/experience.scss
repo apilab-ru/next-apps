@@ -8,10 +8,24 @@
     margin-left: 24px;
   }
 
+  @media (max-width: 640px) {
+    margin-top: 48px;
+  }
+
   &__list {
     position: relative;
     margin-top: 34px;
     padding-left: 56px;
+
+    @media (max-width: 640px) {
+      padding-left: 34px;
+    }
+
+    &::before {
+      @media (max-width: 640px) {
+        left: 6px;
+      }
+    }
   }
 
   &__item {
@@ -26,6 +40,10 @@
       left: -40px;
       width: 1px;
       background: var(--color-border-hover);
+
+      @media (max-width: 640px) {
+        left: -27px;
+      }
     }
   }
 
@@ -63,6 +81,11 @@
     padding-left: 56px;
     overflow: hidden;
 
+    @media (max-width: 640px) {
+      margin-left: -34px;
+      padding-left: 34px;
+    }
+
     .experience__item:last-child {
       padding-bottom: 0;
     }
@@ -77,6 +100,10 @@
     border-radius: 50%;
     background: var(--color-primary);
     box-shadow: 0 0 0 3px rgba(108, 77, 255, 0.12);
+
+    @media (max-width: 640px) {
+      left: -33px;
+    }
   }
 
   &__heading {
@@ -84,6 +111,10 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 32px;
+
+    @media (max-width: 640px) {
+      display: block;
+    }
   }
 
   &__company {
@@ -129,6 +160,12 @@
     font-size: 12px;
     line-height: 1.5;
     white-space: nowrap;
+
+    @media (max-width: 640px) {
+      display: block;
+      margin-top: 6px;
+      white-space: normal;
+    }
 
     &:focus {
       outline: none;
@@ -191,6 +228,10 @@
     line-height: 1.55;
     list-style: none;
 
+    @media (max-width: 640px) {
+      margin-top: 8px;
+    }
+
     li {
       position: relative;
       padding-left: 15px;
@@ -217,46 +258,5 @@
 @media (prefers-reduced-motion: reduce) {
   .experience__extra {
     transition: none;
-  }
-}
-
-@media (max-width: 640px) {
-  .experience {
-    margin-top: 48px;
-
-    &__list {
-      padding-left: 34px;
-
-      &::before {
-        left: 6px;
-      }
-    }
-
-    &__marker {
-      left: -33px;
-    }
-
-    &__item::before {
-      left: -27px;
-    }
-
-    &__heading {
-      display: block;
-    }
-
-    &__period {
-      display: block;
-      margin-top: 6px;
-      white-space: normal;
-    }
-
-    &__description {
-      margin-top: 8px;
-    }
-
-    &__extra-content {
-      margin-left: -34px;
-      padding-left: 34px;
-    }
   }
 }
