@@ -32,7 +32,7 @@ export function Skills() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="skills">
+    <section className="skills" id="skills" data-scroll-section>
       <h2 className="section-title">Навыки</h2>
 
       <div className="skills__row">
@@ -75,7 +75,7 @@ export function Skills() {
       >
         {isOpen ? 'Основные навыки' : 'Больше навыков'}
       </button>
-    </div>
+    </section>
   );
 }
 
