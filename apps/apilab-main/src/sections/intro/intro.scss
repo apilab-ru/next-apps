@@ -83,10 +83,11 @@
   }
 
   &__background {
-    background-image: url('/img/hero-background.webp');
-    background-size: cover;
+    display: block;
     flex: 5;
     height: 600px;
+    min-width: 0;
+    overflow: hidden;
     mask-image: linear-gradient(
       to right,
       transparent 0%,
@@ -99,8 +100,6 @@
       height: auto;
       aspect-ratio: 4 / 3;
       margin-top: 30px;
-      background-image: url('/img/hero-portrait-mobile.jpg');
-      background-position: center 42%;
       mask-image: linear-gradient(
         to bottom,
         transparent 0%,
@@ -109,19 +108,37 @@
         transparent 100%
       );
     }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @media (max-width: 640px) {
+        object-position: center 42%;
+      }
+    }
   }
 
   &__photo {
+    display: block;
     position: absolute;
     bottom: 0;
     left: calc(100% - 80px);
-    width: 400px;
+    width: 500px;
     height: 500px;
-    background-image: url('/img/hero-portrait.webp');
-    background-size: cover;
+    overflow: hidden;
 
     @media (max-width: 640px) {
       display: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
