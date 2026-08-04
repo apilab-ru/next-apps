@@ -84,15 +84,29 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           </dl>
 
-          {project.href && (
-            <a
-              className="button project-modal__link"
-              href={project.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {translate(translations, 'openProject')}
-            </a>
+          {(project.href || project.githubHref) && (
+            <div className="project-modal__links">
+              {project.href && (
+                <a
+                  className="button project-modal__link"
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {translate(translations, 'openProject')}
+                </a>
+              )}
+              {project.githubHref && (
+                <a
+                  className="button project-modal__link"
+                  href={project.githubHref}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {translate(translations, 'openGithub')}
+                </a>
+              )}
+            </div>
           )}
 
           <div className="project-modal__details">

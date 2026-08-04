@@ -7,6 +7,7 @@ export interface PortfolioProject {
   date: string;
   details: PortfolioProjectDetail[];
   href?: string;
+  githubHref?: string;
 }
 
 export interface PortfolioProjectDetail {
@@ -28,6 +29,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         image: '/img/projects/details/portfolio/main.webp',
       },
     ],
+    githubHref: 'https://github.com/apilab-ru/next-apps',
   },
   {
     id: 'bsab',
@@ -54,6 +56,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       },
     ],
     href: 'https://bsab.apilab.ru/',
+    githubHref: 'https://github.com/apilab-ru/bsab',
   },
   {
     id: 'worklog-analyze',
@@ -76,6 +79,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       },
     ],
     href: 'https://worklog-analyze.apilab.ru/',
+    githubHref: 'https://github.com/apilab-ru/frontend-monorepo',
   },
   {
     id: 'file-cabinet',
@@ -105,7 +109,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         image: '/img/projects/details/file-cabinet/popup.jpg',
       },
     ],
-    href: 'https://github.com/apilab-ru/frontend-monorepo/tree/master/apps/filecab',
+    githubHref: 'https://github.com/apilab-ru/frontend-monorepo',
   },
   {
     id: 'record',
@@ -122,6 +126,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       },
     ],
     href: 'https://record.apilab.ru/intro',
+    githubHref: 'https://github.com/apilab-ru/frontend-monorepo',
   },
   {
     id: 'leads',
@@ -216,6 +221,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       },
     ],
     href: 'https://time.apilab.ru/',
+    githubHref: 'https://github.com/apilab-ru/frontend-monorepo',
   },
   {
     id: 'films',

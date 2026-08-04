@@ -3,5 +3,6 @@
   "stackLabel": { "ru": "Стек", "en": "Stack" },
   "dateLabel": { "ru": "Дата", "en": "Date" },
   "openProject": { "ru": "Открыть проект ↗", "en": "Open project ↗" },
+  "openGithub": { "ru": "GitHub ↗", "en": "GitHub ↗" },
   "screenshotAlt": { "ru": "Скриншот проекта «{title}»", "en": "Screenshot of “{title}”" }
 }
