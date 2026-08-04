@@ -1,0 +1,81 @@
+{
+  "section": {
+    "title": { "ru": "Опыт работы", "en": "Work experience" },
+    "showLess": { "ru": "Скрыть", "en": "Show less" },
+    "showAll": { "ru": "Смотреть весь опыт", "en": "View all experience" },
+    "present": { "ru": "настоящее время", "en": "Present" }
+  },
+  "items": {
+    "tbank": {
+      "company": { "ru": "Т Банк", "en": "T-Bank" },
+      "position": { "ru": "Ведущий разработчик", "en": "Lead Developer" },
+      "description": [
+        { "ru": "Разработка корпоративных банковских приложений.", "en": "Development of corporate banking applications." },
+        { "ru": "Проектирование и развитие архитектуры микрофронтендов на Angular и Nx.", "en": "Design and evolution of a microfrontend architecture with Angular and Nx." },
+        { "ru": "Разработка платформенных решений и внутренних библиотек.", "en": "Development of platform solutions and internal libraries." },
+        { "ru": "Реализация сложной бизнес-логики и динамических форм.", "en": "Implementation of complex business logic and dynamic forms." },
+        { "ru": "Техническое лидерство, код-ревью и менторство.", "en": "Technical leadership, code reviews, and mentoring." }
+      ]
+    },
+    "skillbox": {
+      "company": { "ru": "SkillBox", "en": "SkillBox" },
+      "position": { "ru": "Ведущий разработчик", "en": "Lead Developer" },
+      "description": [
+        { "ru": "Разработка образовательной платформы.", "en": "Development of an educational platform." },
+        { "ru": "Проектирование и развитие фронтенд-архитектуры.", "en": "Design and evolution of the frontend architecture." },
+        { "ru": "Реализация сложных пользовательских сценариев.", "en": "Implementation of complex user flows." },
+        { "ru": "Оптимизация производительности и пользовательского опыта.", "en": "Performance and user experience optimization." },
+        { "ru": "Код-ревью и участие в технических решениях.", "en": "Code reviews and participation in technical decision-making." }
+      ]
+    },
+    "skyeng": {
+      "company": { "ru": "Skyeng", "en": "Skyeng" },
+      "position": { "ru": "Senior/Lead Developer", "en": "Senior/Lead Developer" },
+      "description": [
+        { "ru": "Разработка новых продуктов и развитие существующих.", "en": "Development of new products and evolution of existing ones." },
+        { "ru": "Проектирование архитектуры и технических решений.", "en": "Architecture and technical solution design." },
+        { "ru": "Реализация сложной функциональности и проработка бизнес-требований.", "en": "Implementation of complex features and refinement of business requirements." },
+        { "ru": "Код-ревью, менторство и выступления на внутренних митапах.", "en": "Code reviews, mentoring, and presentations at internal meetups." },
+        { "ru": "Проведение собеседований и онбординг сотрудников.", "en": "Technical interviews and employee onboarding." }
+      ]
+    },
+    "simbirsoft": {
+      "company": { "ru": "SimbirSoft", "en": "SimbirSoft" },
+      "position": { "ru": "Senior Developer", "en": "Senior Developer" },
+      "description": [
+        { "ru": "Проектная разработка CRM-системы.", "en": "Project-based CRM system development." },
+        { "ru": "Рефакторинг и внедрение практик реактивного программирования.", "en": "Refactoring and adoption of reactive programming practices." }
+      ]
+    },
+    "haulmont": {
+      "company": { "ru": "Haulmont", "en": "Haulmont" },
+      "position": { "ru": "Web Developer", "en": "Web Developer" },
+      "description": [
+        { "ru": "Разработка многоцелевого веб-портала.", "en": "Development of a multipurpose web portal." },
+        { "ru": "Разработка CRM и проектирование её архитектуры.", "en": "CRM development and architecture design." },
+        { "ru": "Разработка компонентов UI-кита.", "en": "Development of UI kit components." }
+      ]
+    },
+    "intrum": {
+      "company": { "ru": "Intrum CRM", "en": "Intrum CRM" },
+      "position": { "ru": "Fullstack Web Developer", "en": "Full-stack Web Developer" },
+      "description": [
+        { "ru": "Разработка CRM-системы Intrum и внутренних веб-приложений.", "en": "Development of the Intrum CRM system and internal web applications." },
+        { "ru": "Реализация и развитие функциональности.", "en": "Implementation and evolution of product functionality." },
+        { "ru": "Оптимизация кода, архитектуры, бд под большие данные и нагрузку.", "en": "Optimization of code, architecture, and databases for large datasets and high load." },
+        { "ru": "Разработка микросервисов и интеграций с внешними API.", "en": "Development of microservices and integrations with external APIs." }
+      ]
+    },
+    "parusMedia": {
+      "company": { "ru": "Парус Медиа", "en": "Parus Media" },
+      "position": { "ru": "Инженер-программист", "en": "Software Engineer" },
+      "description": [
+        { "ru": "Разработка новых и поддержка существующих проектов.", "en": "Development of new projects and maintenance of existing ones." },
+        { "ru": "Вёрстка и интеграция интерфейсов с корпоративной CMS.", "en": "UI implementation and integration with a corporate CMS." },
+        { "ru": "Разработка модулей для корпоративной CMS.", "en": "Development of modules for a corporate CMS." },
+        { "ru": "Интеграция со сторонними сервисами.", "en": "Integration with third-party services." },
+        { "ru": "Разработка программного обеспечения для терминалов.", "en": "Development of software for self-service terminals." }
+      ]
+    }
+  }
+}

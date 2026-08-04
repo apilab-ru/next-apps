@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${manrope.variable} ${iconsFont.variable}`}>
+    <html lang="ru" className={`${manrope.variable} ${iconsFont.variable}`}>
       <body>
         <Tooltip.Provider delayDuration={200}>{children}</Tooltip.Provider>
       </body>

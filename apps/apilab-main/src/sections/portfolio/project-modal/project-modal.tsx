@@ -3,6 +3,9 @@ import { useEffect, useRef } from 'react';
 import { formatDate } from '@/helpers/formatDate';
 import type { PortfolioProject } from '../model';
 import './project-modal.scss';
+import { useI18n } from '@/i18n/i18n';
+import translations from './translations.json';
+import projectTranslations from '../translations.json';
 
 interface ProjectModalProps {
   project: PortfolioProject | null;
@@ -10,6 +13,7 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const { language, translate } = useI18n();
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -53,22 +57,29 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             className="project-modal__close"
             type="button"
             onClick={onClose}
-            aria-label="Закрыть окно"
+            aria-label={translate(translations, 'closeLabel')}
             autoFocus
           >
             ×
           </button>
 
-          <h2 className="project-modal__title">{project.title}</h2>
+          <h2 className="project-modal__title">
+            {translate(
+              projectTranslations,
+              `projects.${project.id}.title`,
+            )}
+          </h2>
           <dl className="project-modal__meta">
             <div>
-              <dt>Стек</dt>
+              <dt>{translate(translations, 'stackLabel')}</dt>
               <dd>{project.stack.join(', ')}</dd>
             </div>
             <div>
-              <dt>Дата</dt>
+              <dt>{translate(translations, 'dateLabel')}</dt>
               <dd>
-                <time dateTime={project.date}>{formatDate(project.date)}</time>
+                <time dateTime={project.date}>
+                  {formatDate(project.date, language)}
+                </time>
               </dd>
             </div>
           </dl>
@@ -80,22 +91,39 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               target="_blank"
               rel="noreferrer"
             >
-              Открыть проект ↗
+              {translate(translations, 'openProject')}
             </a>
           )}
 
           <div className="project-modal__details">
-            {project.details.map((detail, index) => (
+            {project.details.map((detail, index) => {
+              const detailText = translate(
+                projectTranslations,
+                `projects.${project.id}.details.${index}.text`,
+              );
+              const hasDetailText = detailText !==
+                `projects.${project.id}.details.${index}.text`;
+
+              return (
               <section
                 className="project-modal__detail"
                 key={`${project.id}-${index}`}
               >
-                {detail.text && <p>{detail.text}</p>}
+                {hasDetailText && <p>{detailText}</p>}
                 {detail.image && (
                   <Image
                     className="project-modal__image"
                     src={detail.image}
-                    alt={detail.text || `Скриншот проекта «${project.title}»`}
+                    alt={
+                      hasDetailText
+                        ? detailText
+                        : translate(translations, 'screenshotAlt', {
+                            title: translate(
+                              projectTranslations,
+                              `projects.${project.id}.title`,
+                            ),
+                          })
+                    }
                     width={1200}
                     height={760}
                     sizes="(max-width: 860px) calc(100vw - 48px), 760px"
@@ -103,7 +131,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   />
                 )}
               </section>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}

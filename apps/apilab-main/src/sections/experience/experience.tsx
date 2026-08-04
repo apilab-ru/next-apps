@@ -4,16 +4,20 @@ import { useState } from 'react';
 import './experience.scss';
 import { EXTRA_EXPERIENCE, PREVIEW_EXPERIENCE } from './model';
 import ExperienceItem from './experience-item';
+import { useI18n } from '@/i18n/i18n';
+import translations from './translations.json';
 
 export function Experience() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { translate } = useI18n();
+  const t = (key: string) => translate(translations, key);
 
   return (
     <section className="experience" id="experience" data-scroll-section>
-      <h2 className="section-title">Опыт работы</h2>
+      <h2 className="section-title">{t('section.title')}</h2>
       <div className={`experience__list${isExpanded ? ' --expanded' : ''}`}>
         {PREVIEW_EXPERIENCE.map((item) => (
-          <ExperienceItem item={item} key={item.company} />
+          <ExperienceItem item={item} key={item.id} />
         ))}
         <div
           id="extra-experience"
@@ -25,7 +29,7 @@ export function Experience() {
               <ExperienceItem
                 item={item}
                 isHidden={!isExpanded}
-                key={item.company}
+                key={item.id}
               />
             ))}
           </div>
@@ -38,7 +42,7 @@ export function Experience() {
         aria-controls="extra-experience"
         onClick={() => setIsExpanded((value) => !value)}
       >
-        {isExpanded ? 'Скрыть' : 'Смотреть весь опыт'}
+        {isExpanded ? t('section.showLess') : t('section.showAll')}
       </button>
     </section>
   );

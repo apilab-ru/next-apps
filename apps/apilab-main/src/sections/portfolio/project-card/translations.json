@@ -1,0 +1,5 @@
+{
+  "detailsLabel": { "ru": "Подробнее о проекте «{title}»", "en": "Learn more about “{title}”" },
+  "imageAlt": { "ru": "Интерфейс проекта «{title}»", "en": "Interface of “{title}”" },
+  "technologiesLabel": { "ru": "Технологии", "en": "Technologies" }
+}

@@ -1,41 +1,40 @@
+'use client';
+
 import * as Tooltip from '@radix-ui/react-tooltip';
 import './about-stat.scss';
+import { useI18n } from '@/i18n/i18n';
+import translations from './translations.json';
 
 type AboutStat = {
-  title: string;
-  description: string;
-  hint: string;
+  titleKey: string;
+  descriptionKey: string;
+  hintKey: string;
   icon: string;
 };
 
 const stats: AboutStat[] = [
   {
-    title: '12+',
-    description: 'лет опыта',
-    hint: '12+ лет коммерческого опыта.',
+    titleKey: 'experienceTitle', descriptionKey: 'experienceLabel', hintKey: 'experienceHint',
     icon: 'briefcase',
   },
   {
-    title: 'Цели',
-    hint: 'Понимаю цели бизнеса и предлагаю решения, которые приносят результат.',
-    description: 'бизнеса',
+    titleKey: 'goalsTitle', hintKey: 'goalsHint', descriptionKey: 'goalsLabel',
     icon: 'target',
   },
   {
-    title: 'Full',
-    hint: 'Основная специализация — frontend, но при необходимости работаю и с серверной частью на Node.js.\nОколо четырёх лет работал в роли fullstack-разработчика.',
-    description: 'stack',
+    titleKey: 'fullstackTitle', hintKey: 'fullstackHint', descriptionKey: 'fullstackLabel',
     icon: 'embed2',
   },
   {
-    title: 'Сложные',
-    description: 'кейсы',
-    hint: 'Не боюсь сложных кейсов.',
+    titleKey: 'challengesTitle', descriptionKey: 'challengesLabel', hintKey: 'challengesHint',
     icon: 'stack',
   },
 ];
 
 export function AboutStat() {
+  const { translate } = useI18n();
+  const t = (key: string) => translate(translations, key);
+
   return (
     <div className="about-stat">
       {stats.map((item) => (
@@ -45,17 +44,17 @@ export function AboutStat() {
               <div className={'about-stat__icon icon-' + item.icon}></div>
               <div>
                 <div className="about-stat__title">
-                  {item.title}
+                  {t(item.titleKey)}
                   <span className="about-stat__title-description">
                     {' '}
-                    {item.description}
+                    {t(item.descriptionKey)}
                   </span>
                 </div>
                 <div className="about-stat__description about-stat__description--short">
-                  {item.description}
+                  {t(item.descriptionKey)}
                 </div>
                 <div className="about-stat__description about-stat__description--mobile">
-                  {item.hint}
+                  {t(item.hintKey)}
                 </div>
               </div>
             </div>
@@ -67,7 +66,7 @@ export function AboutStat() {
               sideOffset={10}
               collisionPadding={16}
             >
-              {item.hint}
+              {t(item.hintKey)}
               <Tooltip.Arrow className="about-stat__tooltip-arrow" />
             </Tooltip.Content>
           </Tooltip.Portal>

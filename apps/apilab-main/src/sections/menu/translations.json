@@ -1,0 +1,7 @@
+{
+  "navigationLabel": { "ru": "Основная навигация", "en": "Main navigation" },
+  "about": { "ru": "Обо мне", "en": "About me" },
+  "skills": { "ru": "Навыки", "en": "Skills" },
+  "experience": { "ru": "Опыт", "en": "Experience" },
+  "projects": { "ru": "Проекты", "en": "Projects" }
+}

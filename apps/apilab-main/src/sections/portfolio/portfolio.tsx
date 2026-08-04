@@ -6,6 +6,8 @@ import type { PortfolioProject } from './model';
 import ProjectCard from './project-card/project-card';
 import ProjectModal from './project-modal/project-modal';
 import './portfolio.scss';
+import { useI18n } from '@/i18n/i18n';
+import translations from './translations.json';
 
 const PROJECT_QUERY_PARAM = 'project';
 const PROJECT_MODAL_HISTORY_KEY = 'portfolioProjectModal';
@@ -19,6 +21,8 @@ function getProjectFromUrl() {
 }
 
 export function Portfolio() {
+  const { translate } = useI18n();
+  const t = (key: string) => translate(translations, key);
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedProject, setSelectedProject] =
     useState<PortfolioProject | null>(null);
@@ -77,7 +81,7 @@ export function Portfolio() {
 
   return (
     <section className="portfolio" id="projects" data-scroll-section>
-      <h2 className="section-title">Проекты</h2>
+      <h2 className="section-title">{t('section.title')}</h2>
       <div className="portfolio__grid">
         {previewProjects.map((project) => (
           <ProjectCard
@@ -114,7 +118,7 @@ export function Portfolio() {
         aria-controls="extra-projects"
         onClick={() => setIsExpanded((value) => !value)}
       >
-        {isExpanded ? 'Скрыть проекты' : 'Смотреть все проекты'}
+        {isExpanded ? t('section.showLess') : t('section.showAll')}
       </button>
       <ProjectModal project={selectedProject} onClose={closeProject} />
     </section>

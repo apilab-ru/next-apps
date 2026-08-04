@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { formatDate } from '@/helpers/formatDate';
 import { formatDuration } from '@/helpers/formatDuration';
 import type { ExpItem } from './model';
+import { useI18n } from '@/i18n/i18n';
+import translations from './translations.json';
 
 interface ExperienceItemProps {
   item: ExpItem;
@@ -12,6 +14,12 @@ export function ExperienceItem({
   item,
   isHidden = false,
 }: ExperienceItemProps) {
+  const { language, translate, translateList } = useI18n();
+  const itemPath = `items.${item.id}`;
+  const descriptions = translateList(
+    translations,
+    `${itemPath}.description`,
+  );
   const tooltipId = `experience-duration-${item.from}`;
 
   return (
@@ -23,33 +31,35 @@ export function ExperienceItem({
             <span className="experience__company-logo">
               <Image src={item.logo} alt="" width={22} height={22} />
             </span>
-            {item.company}
+            {translate(translations, `${itemPath}.company`)}
           </h3>
-          <p className="experience__position">{item.position}</p>
+          <p className="experience__position">
+            {translate(translations, `${itemPath}.position`)}
+          </p>
         </div>
         <span
           className="experience__period"
           tabIndex={isHidden ? -1 : 0}
           aria-describedby={tooltipId}
         >
-          <time dateTime={item.from}>{formatDate(item.from)}</time>
+          <time dateTime={item.from}>{formatDate(item.from, language)}</time>
           {' — '}
           {item.to ? (
-            <time dateTime={item.to}>{formatDate(item.to)}</time>
+            <time dateTime={item.to}>{formatDate(item.to, language)}</time>
           ) : (
-            'настоящее время'
+            translate(translations, 'section.present')
           )}
           <span
             className="experience__duration-tooltip"
             id={tooltipId}
             role="tooltip"
           >
-            {formatDuration(item.from, item.to)}
+            {formatDuration(item.from, item.to, language)}
           </span>
         </span>
       </div>
       <ul className="experience__description">
-        {item.description.map((description) => (
+        {descriptions.map((description) => (
           <li key={description}>{description}</li>
         ))}
       </ul>

@@ -3,6 +3,8 @@
 import './skills.scss';
 import { SkillIcon } from './icons';
 import { useState } from 'react';
+import { useI18n } from '@/i18n/i18n';
+import translations from './translations.json';
 
 const mainSkills = [
   { skill: 'TypeScript', class: 'typescript' },
@@ -30,10 +32,12 @@ const otherSkills = [
 
 export function Skills() {
   const [isOpen, setIsOpen] = useState(false);
+  const { translate } = useI18n();
+  const t = (key: string) => translate(translations, key);
 
   return (
     <section className="skills" id="skills" data-scroll-section>
-      <h2 className="section-title">Навыки</h2>
+      <h2 className="section-title">{t('sectionTitle')}</h2>
 
       <div className="skills__row">
         {mainSkills.map((item) => (
@@ -73,7 +77,7 @@ export function Skills() {
         aria-controls="other-skills"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? 'Основные навыки' : 'Больше навыков'}
+        {isOpen ? t('showCoreSkills') : t('showMoreSkills')}
       </button>
     </section>
   );

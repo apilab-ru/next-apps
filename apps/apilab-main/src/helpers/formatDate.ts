@@ -1,9 +1,9 @@
-const dateFormatter = new Intl.DateTimeFormat('ru-RU', {
-  month: 'long',
-  year: 'numeric',
-  timeZone: 'UTC',
-});
+import type { Language } from '@/i18n/i18n';
 
-export function formatDate(date: string) {
-  return dateFormatter.format(new Date(`${date}T00:00:00Z`));
+export function formatDate(date: string, language: Language = 'ru') {
+  return new Intl.DateTimeFormat(language === 'ru' ? 'ru-RU' : 'en-US', {
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(`${date}T00:00:00Z`));
 }

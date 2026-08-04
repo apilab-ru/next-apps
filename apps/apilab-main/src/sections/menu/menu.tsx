@@ -3,12 +3,15 @@
 import './menu.scss';
 import { useDebouncedValue } from '@/hooks/use-debounced-value';
 import { useEffect, useState } from 'react';
+import { useI18n } from '@/i18n/i18n';
+import translations from './translations.json';
+import { useRouter } from 'next/navigation';
 
 const items = [
-  { label: 'Обо мне', path: 'intro', sections: ['intro', 'about'] },
-  { label: 'Навыки', path: 'skills', sections: ['skills'] },
-  { label: 'Опыт', path: 'experience', sections: ['experience'] },
-  { label: 'Проекты', path: 'projects', sections: ['projects'] },
+  { labelKey: 'about', path: 'intro', sections: ['intro', 'about'] },
+  { labelKey: 'skills', path: 'skills', sections: ['skills'] },
+  { labelKey: 'experience', path: 'experience', sections: ['experience'] },
+  { labelKey: 'projects', path: 'projects', sections: ['projects'] },
 ];
 
 function isActiveSection(sections: string[], active: string): boolean {
@@ -16,6 +19,9 @@ function isActiveSection(sections: string[], active: string): boolean {
 }
 
 export function Menu() {
+  const { language, translate } = useI18n();
+  const router = useRouter();
+  const t = (key: string) => translate(translations, key);
   const [currentSection, setCurrentSection] = useState('intro');
   const [activeSection, debounceActiveSection] = useDebouncedValue(
     currentSection,
@@ -35,8 +41,12 @@ export function Menu() {
     };
   }, []);
 
+  const switchLanguage = (pathname: '/' | '/en') => {
+    router.push(`${pathname}${window.location.search}${window.location.hash}`);
+  };
+
   return (
-    <nav className="menu" aria-label="Основная навигация">
+    <nav className="menu" aria-label={t('navigationLabel')}>
       <div className="menu__title">
         <img src="/img/logo-main.png" className="menu__logo" alt="logo" />
         APILAB
@@ -56,9 +66,29 @@ export function Menu() {
                 : undefined
             }
           >
-            {item.label}
+            {t(item.labelKey)}
           </a>
         ))}
+      </div>
+      <div className="menu__language" aria-label="Language">
+        <button
+          className={`menu__language-option${language === 'ru' ? ' --active' : ''}`}
+          type="button"
+          onClick={() => switchLanguage('/')}
+          aria-pressed={language === 'ru'}
+          aria-label="Русский"
+        >
+          <span aria-hidden="true">🇷🇺</span> Ru
+        </button>
+        <button
+          className={`menu__language-option${language === 'en' ? ' --active' : ''}`}
+          type="button"
+          onClick={() => switchLanguage('/en')}
+          aria-pressed={language === 'en'}
+          aria-label="English"
+        >
+          <span aria-hidden="true">🇬🇧</span> En
+        </button>
       </div>
     </nav>
   );

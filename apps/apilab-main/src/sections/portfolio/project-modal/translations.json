@@ -1,0 +1,7 @@
+{
+  "closeLabel": { "ru": "Закрыть окно", "en": "Close dialog" },
+  "stackLabel": { "ru": "Стек", "en": "Stack" },
+  "dateLabel": { "ru": "Дата", "en": "Date" },
+  "openProject": { "ru": "Открыть проект ↗", "en": "Open project ↗" },
+  "screenshotAlt": { "ru": "Скриншот проекта «{title}»", "en": "Screenshot of “{title}”" }
+}

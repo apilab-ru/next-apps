@@ -1,29 +1,10 @@
-import styles from './page.module.scss';
-import Intro from '@/sections/intro/intro';
-import Menu from '@/sections/menu/menu';
-import About from '@/sections/about/about';
-import Skills from '@/sections/skills/skills';
-import Experience from '@/sections/experience/experience';
-import Portfolio from '@/sections/portfolio/portfolio';
-import Footer from '@/sections/footer/footer';
-import ScrollHashSync from '@/sections/scroll-hash-sync/scroll-hash-sync';
+import HomePage from './home-page';
+import { I18nProvider } from '@/i18n/i18n';
 
-export default function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.scss file.
-   */
+export default function RussianPage() {
   return (
-    <div className={styles.page}>
-      <Menu />
-      <ScrollHashSync />
-      <Intro />
-      <About />
-      <Skills />
-      <Experience />
-      <Portfolio />
-      <Footer />
-    </div>
+    <I18nProvider language="ru">
+      <HomePage />
+    </I18nProvider>
   );
 }

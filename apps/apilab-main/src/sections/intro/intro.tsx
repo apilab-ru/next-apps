@@ -1,4 +1,8 @@
+'use client';
+
 import './intro.scss';
+import { useI18n } from '@/i18n/i18n';
+import translations from './translations.json';
 
 const links = [
   {
@@ -16,16 +20,18 @@ const links = [
 ];
 
 export function Intro() {
+  const { translate } = useI18n();
+  const t = (key: string) => translate(translations, key);
+
   return (
     <section className="intro" id="intro" data-scroll-section>
       <div className="intro__main">
         <div className="intro__text-container">
           <div className="intro__text">
-            <h3>Привет! Я Виктор</h3>
-            <h1>Frontend разработчик</h1>
+            <h3>{t('greeting')}</h3>
+            <h1>{t('jobTitle')}</h1>
             <p className="intro__desc">
-              Создаю быстрые, доступные и удобные веб-приложения с продуманным
-              пользовательским опытом.
+              {t('description')}
             </p>
             <div className="intro__actions"></div>
             <div className="intro__links">

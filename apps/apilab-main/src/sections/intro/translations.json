@@ -1,0 +1,8 @@
+{
+  "greeting": { "ru": "Привет! Я Виктор", "en": "Hi! I'm Viktor" },
+  "jobTitle": { "ru": "Frontend разработчик", "en": "Frontend Developer" },
+  "description": {
+    "ru": "Создаю быстрые, доступные и удобные веб-приложения с продуманным пользовательским опытом.",
+    "en": "I build fast, accessible, and user-friendly web applications with thoughtfully designed user experiences."
+  }
+}

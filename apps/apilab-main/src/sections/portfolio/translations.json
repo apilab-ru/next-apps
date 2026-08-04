@@ -1,0 +1,403 @@
+{
+  "section": {
+    "title": {
+      "ru": "Проекты",
+      "en": "Projects"
+    },
+    "showLess": {
+      "ru": "Скрыть проекты",
+      "en": "Show fewer projects"
+    },
+    "showAll": {
+      "ru": "Смотреть все проекты",
+      "en": "View all projects"
+    }
+  },
+  "projects": {
+    "bsab": {
+      "title": {
+        "ru": "React/Nest Parser",
+        "en": "React/Nest Parser"
+      },
+      "description": {
+        "ru": "Парсинг и поиск карт Beat Saber с расширенными фильтрами.",
+        "en": "Beat Saber map parsing and search with advanced filters."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Приложение для парсинга и поиска карт Beat Saber с продвинутой системой фильтров.",
+            "en": "An application for parsing and searching Beat Saber maps with an advanced filtering system."
+          }
+        },
+        {
+          "text": {
+            "ru": "Локальный прокси скачивает каталог карт с сервера и ускоряет последующую загрузку.",
+            "en": "A local proxy downloads the map catalog and speeds up subsequent loading."
+          }
+        },
+        {
+          "text": {
+            "ru": "Каталог и поиск карт.",
+            "en": "Map catalog and search."
+          }
+        },
+        {
+          "text": {
+            "ru": "Расширенные фильтры.",
+            "en": "Advanced filters."
+          }
+        }
+      ]
+    },
+    "worklog-analyze": {
+      "title": {
+        "ru": "Worklog Analyze",
+        "en": "Worklog Analyze"
+      },
+      "description": {
+        "ru": "Анализ рабочего времени и гибкая группировка данных из Jira.",
+        "en": "Worklog analysis and flexible grouping of Jira data."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Приложение для анализа рабочего времени, экспортированного из Jira.",
+            "en": "An application for analyzing worklogs exported from Jira."
+          }
+        },
+        {
+          "text": {
+            "ru": "Настройка экспорта и импорт данных в нужный формат.",
+            "en": "Export configuration and data import in the required format."
+          }
+        },
+        {
+          "text": {
+            "ru": "Анализ данных с настраиваемыми правилами группировки.",
+            "en": "Data analysis with configurable grouping rules."
+          }
+        }
+      ]
+    },
+    "file-cabinet": {
+      "title": {
+        "ru": "File Cabinet",
+        "en": "File Cabinet"
+      },
+      "description": {
+        "ru": "Расширение Chrome для ведения каталога фильмов и сериалов.",
+        "en": "A Chrome extension for managing a movie and TV series catalog."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Расширение Chrome для создания каталога фильмов и сериалов с метаданными и расширенным поиском.",
+            "en": "A Chrome extension for building a movie and TV series catalog with metadata and advanced search."
+          }
+        },
+        {
+          "text": {
+            "ru": "Каталог и поиск внутри расширения.",
+            "en": "Catalog and search within the extension."
+          }
+        },
+        {
+          "text": {
+            "ru": "Поиск фильмов среди закладок.",
+            "en": "Movie search across bookmarks."
+          }
+        },
+        {
+          "text": {
+            "ru": "Добавление фильма непосредственно со страницы сайта.",
+            "en": "Adding a movie directly from a website page."
+          }
+        },
+        {
+          "text": {
+            "ru": "Редактирование метаданных перед сохранением.",
+            "en": "Editing metadata before saving."
+          }
+        }
+      ]
+    },
+    "record": {
+      "title": {
+        "ru": "Learn Songs Lyric",
+        "en": "Learn Songs Lyric"
+      },
+      "description": {
+        "ru": "Изучение английских песен с распознаванием и синтезом речи.",
+        "en": "Learning English through songs with speech recognition and synthesis."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Проект для изучения английского языка по текстам песен.",
+            "en": "A project for learning English through song lyrics."
+          }
+        },
+        {
+          "text": {
+            "ru": "SpeechSynthesis озвучивает перевод и английскую строку, а SpeechRecognition оценивает произношение с помощью расстояния Левенштейна.",
+            "en": "SpeechSynthesis reads the translation and English line aloud, while SpeechRecognition evaluates pronunciation using Levenshtein distance."
+          }
+        }
+      ]
+    },
+    "leads": {
+      "title": {
+        "ru": "Realtime CRM",
+        "en": "Realtime CRM"
+      },
+      "description": {
+        "ru": "CRM для управления обзвонами и статистикой в реальном времени.",
+        "en": "A CRM for call campaign management and real-time statistics."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "CRM для управления списками обзвона, пользователями и статистикой в реальном времени.",
+            "en": "A CRM for managing call lists, users, and real-time statistics."
+          }
+        },
+        {
+          "text": {
+            "ru": "Обновления реализованы на Firebase; серверная часть перенесена с PHP на NestJS.",
+            "en": "Real-time updates use Firebase; the backend was migrated from PHP to NestJS."
+          }
+        }
+      ]
+    },
+    "vue-calc": {
+      "title": {
+        "ru": "Калькулятор на Vue.js",
+        "en": "Vue.js Calculator"
+      },
+      "description": {
+        "ru": "Редактируемая корзина с автоматическим пересчётом стоимости.",
+        "en": "An editable cart with automatic price recalculation."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Корзина товаров с редактированием параметров и автоматическим пересчётом цены. Собрана как Web Component для интеграции на сторонние сайты.",
+            "en": "A shopping cart with editable parameters and automatic price recalculation, built as a Web Component for third-party integration."
+          }
+        },
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    "crm-lang": {
+      "title": {
+        "ru": "CRM иностранных языков",
+        "en": "Language School CRM"
+      },
+      "description": {
+        "ru": "CRM языковой школы с расписанием, статистикой и пятью ролями.",
+        "en": "A language school CRM with scheduling, statistics, and five user roles."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "CRM языковой школы с пятью ролями пользователей, расписанием, посещаемостью и статистикой.",
+            "en": "A language school CRM with five user roles, scheduling, attendance, and statistics."
+          }
+        },
+        {
+          "text": {
+            "ru": "Дашборд со статистикой.",
+            "en": "Statistics dashboard."
+          }
+        },
+        {
+          "text": {
+            "ru": "Личные кабинеты учеников, педагогов, групп и корпоративных клиентов.",
+            "en": "Profiles for students, teachers, groups, and corporate clients."
+          }
+        },
+        {
+          "text": {
+            "ru": "Управление пользователями.",
+            "en": "User management."
+          }
+        },
+        {
+          "text": {
+            "ru": "Ролевая модель доступа.",
+            "en": "Role-based access control."
+          }
+        },
+        {
+          "text": {
+            "ru": "Учёт посещаемости.",
+            "en": "Attendance tracking."
+          }
+        },
+        {
+          "text": {
+            "ru": "Расписание групп, педагогов и учеников.",
+            "en": "Schedules for groups, teachers, and students."
+          }
+        }
+      ]
+    },
+    "time": {
+      "title": {
+        "ru": "Приложение учёта времени",
+        "en": "Time Tracking App"
+      },
+      "description": {
+        "ru": "Простой инструмент для учёта времени по задачам.",
+        "en": "A simple tool for tracking time by task."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Инструмент для оценки и учёта фактически затраченного времени по задачам.",
+            "en": "A tool for estimating and tracking the actual time spent on tasks."
+          }
+        },
+        {
+          "text": {
+            "ru": "Данные сохраняются в localStorage после каждого действия, поэтому не теряются при закрытии вкладки.",
+            "en": "Data is saved to localStorage after every action and is preserved when the tab is closed."
+          }
+        }
+      ]
+    },
+    "films": {
+      "title": {
+        "ru": "Список фильмов",
+        "en": "Movie List"
+      },
+      "description": {
+        "ru": "Адаптивное приложение для ведения списка просмотренных фильмов.",
+        "en": "A responsive application for tracking watched movies."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Небольшое адаптивное приложение для ведения списка просмотренных фильмов.",
+            "en": "A compact responsive application for tracking watched movies."
+          }
+        },
+        {},
+        {
+          "text": {
+            "ru": "Мобильная версия.",
+            "en": "Mobile version."
+          }
+        }
+      ]
+    },
+    "pay-form": {
+      "title": {
+        "ru": "Форма оплаты",
+        "en": "Payment Form"
+      },
+      "description": {
+        "ru": "Адаптивная платёжная форма с валидацией данных.",
+        "en": "A responsive payment form with data validation."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Форма оплаты с валидацией полей и адаптацией под мобильные устройства.",
+            "en": "A payment form with field validation and mobile adaptation."
+          }
+        },
+        {},
+        {
+          "text": {
+            "ru": "Мобильная версия.",
+            "en": "Mobile version."
+          }
+        }
+      ]
+    },
+    "slider": {
+      "title": {
+        "ru": "Многоуровневый слайдер",
+        "en": "Multi-level Slider"
+      },
+      "description": {
+        "ru": "Круговой слайдер с ленивой загрузкой большого объёма данных.",
+        "en": "A circular slider with lazy loading for large datasets."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Круговой многоуровневый слайдер с неограниченным количеством уровней и ленивой загрузкой элементов.",
+            "en": "A circular multi-level slider with unlimited nesting and lazy-loaded items."
+          }
+        },
+        {}
+      ]
+    },
+    "bouquet-editor": {
+      "title": {
+        "ru": "Редактор букетов",
+        "en": "Bouquet Editor"
+      },
+      "description": {
+        "ru": "VK-приложение для интерактивного составления букета.",
+        "en": "A VK application for interactively creating bouquets."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Прототип VK-приложения: пользователь выбирает цветы, собирает букет, добавляет стикеры и записку. Стоимость рассчитывается автоматически.",
+            "en": "A VK app prototype where users select flowers, assemble a bouquet, add stickers and a note, with automatic price calculation."
+          }
+        },
+        {},
+        {}
+      ]
+    },
+    "crm-stock": {
+      "title": {
+        "ru": "CRM Склад",
+        "en": "Inventory CRM"
+      },
+      "description": {
+        "ru": "Учёт продаж, остатков и товарного баланса магазина.",
+        "en": "Tracking store sales, inventory, and stock balance."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "CRM для учёта продаж, остатков и товарного баланса магазина.",
+            "en": "A CRM for tracking store sales, inventory, and stock balance."
+          }
+        },
+        {},
+        {},
+        {}
+      ]
+    },
+    "portal": {
+      "title": {
+        "ru": "Портал компании",
+        "en": "Company Portal"
+      },
+      "description": {
+        "ru": "Корпоративный портал на собственном серверном решении.",
+        "en": "A corporate portal built on a custom backend solution."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Корпоративный портал компании на PHP и Smarty.",
+            "en": "A corporate company portal built with PHP and Smarty."
+          }
+        },
+        {}
+      ]
+    }
+  }
+}

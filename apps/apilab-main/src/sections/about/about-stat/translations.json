@@ -1,0 +1,14 @@
+{
+  "experienceTitle": { "ru": "12+", "en": "12+" },
+  "experienceLabel": { "ru": "лет опыта", "en": "years of experience" },
+  "experienceHint": { "ru": "12+ лет коммерческого опыта.", "en": "12+ years of professional experience." },
+  "goalsTitle": { "ru": "Цели", "en": "Business" },
+  "goalsLabel": { "ru": "бизнеса", "en": "goals" },
+  "goalsHint": { "ru": "Понимаю цели бизнеса и предлагаю решения, которые приносят результат.", "en": "I understand business goals and propose solutions that deliver results." },
+  "fullstackTitle": { "ru": "Full", "en": "Full" },
+  "fullstackLabel": { "ru": "stack", "en": "stack" },
+  "fullstackHint": { "ru": "Основная специализация — frontend, но при необходимости работаю и с серверной частью на Node.js.\nОколо четырёх лет работал в роли fullstack-разработчика.", "en": "My primary specialization is frontend, but I also work with Node.js on the backend when needed.\nI spent about four years working as a full-stack developer." },
+  "challengesTitle": { "ru": "Сложные", "en": "Complex" },
+  "challengesLabel": { "ru": "кейсы", "en": "challenges" },
+  "challengesHint": { "ru": "Не боюсь сложных кейсов.", "en": "I am comfortable tackling complex challenges." }
+}
