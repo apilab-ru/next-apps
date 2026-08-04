@@ -16,6 +16,20 @@ export interface PortfolioProjectDetail {
 
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
+    id: 'portfolio',
+    title: 'Personal Portfolio',
+    description: 'Персональный двуязычный лендинг-портфолио.',
+    image: '/img/projects/details/portfolio/main.webp',
+    stack: ['Next.js', 'React', 'TypeScript', 'SCSS', 'SSG', 'LLM'],
+    date: '2026-08-04',
+    details: [
+      {
+        text: 'Адаптивный двуязычный лендинг с опытом, навыками и проектами. Поддерживает статическую генерацию и развёртывание без Node.js.',
+        image: '/img/projects/details/portfolio/main.webp',
+      },
+    ],
+  },
+  {
     id: 'bsab',
     title: 'React/Nest Parser',
     description: 'Парсинг и поиск карт Beat Saber с расширенными фильтрами.',

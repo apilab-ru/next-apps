@@ -14,6 +14,24 @@
     }
   },
   "projects": {
+    "portfolio": {
+      "title": {
+        "ru": "Персональное портфолио",
+        "en": "Personal Portfolio"
+      },
+      "description": {
+        "ru": "Персональный двуязычный лендинг-портфолио.",
+        "en": "A personal bilingual portfolio landing page."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Адаптивный двуязычный лендинг с опытом, навыками и проектами. Поддерживает статическую генерацию и развёртывание без Node.js. Создавался с использованием LLM.",
+            "en": "A responsive bilingual landing page showcasing experience, skills, and projects. Supports static generation and deployment without Node.js. Created with the help of an LLM."
+          }
+        }
+      ]
+    },
     "bsab": {
       "title": {
         "ru": "React/Nest Parser",
