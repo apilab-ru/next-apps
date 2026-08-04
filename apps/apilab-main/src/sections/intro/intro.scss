@@ -83,7 +83,7 @@
   }
 
   &__background {
-    background-image: url('/img/fon.png');
+    background-image: url('/img/hero-background.webp');
     background-size: cover;
     flex: 5;
     height: 600px;
@@ -99,7 +99,7 @@
       height: auto;
       aspect-ratio: 4 / 3;
       margin-top: 30px;
-      background-image: url('/img/me@1200.jpg');
+      background-image: url('/img/hero-portrait-mobile.jpg');
       background-position: center 42%;
       mask-image: linear-gradient(
         to bottom,
@@ -117,7 +117,7 @@
     left: calc(100% - 80px);
     width: 400px;
     height: 500px;
-    background-image: url('/img/photo.png');
+    background-image: url('/img/hero-portrait.webp');
     background-size: cover;
 
     @media (max-width: 640px) {
