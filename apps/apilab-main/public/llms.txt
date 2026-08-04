@@ -1,0 +1,23 @@
+# APILAB — Viktor Zakharov Portfolio
+
+> Personal portfolio of Viktor Zakharov, a lead frontend developer with more than 12 years of commercial software development experience.
+
+The website is available in Russian and English. It presents Viktor's professional background, technical skills, work experience, and selected projects. Section fragments point to content on the same single-page portfolio.
+
+## Main pages
+
+- [Russian portfolio](https://apilab.ru/): Main version of the portfolio in Russian.
+- [English portfolio](https://apilab.ru/en/): English version of the portfolio.
+
+## Portfolio sections
+
+- [About](https://apilab.ru/#intro): Professional summary and contact links.
+- [Skills](https://apilab.ru/#skills): Frontend, backend, tooling, and infrastructure skills.
+- [Experience](https://apilab.ru/#experience): Commercial work experience and roles.
+- [Projects](https://apilab.ru/#projects): Selected software projects with descriptions and technology stacks.
+
+## Profiles
+
+- [GitHub](https://github.com/apilab-ru/): Public source-code repositories.
+- [LinkedIn](https://www.linkedin.com/in/apilab/): Professional profile.
+- [Telegram](https://t.me/apilab): Contact Viktor Zakharov.

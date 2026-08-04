@@ -44,5 +44,5 @@ const icons: Record<string, (props: IconProps) => JSX.Element> = {
 export function SkillIcon({ name, ...props }: { name: string } & IconProps) {
   const Icon = icons[name];
   if (!Icon) return null;
-  return <Icon {...props} />;
+  return <Icon aria-hidden="true" focusable="false" {...props} />;
 }

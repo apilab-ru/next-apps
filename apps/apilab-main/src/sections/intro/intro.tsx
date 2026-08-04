@@ -7,14 +7,17 @@ import translations from './translations.json';
 const links = [
   {
     name: 'linkedin',
+    label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/apilab/',
   },
   {
     name: 'github',
+    label: 'GitHub',
     link: 'https://github.com/apilab-ru/',
   },
   {
     name: 'telegram',
+    label: 'Telegram',
     link: 'https://t.me/apilab',
   },
 ];
@@ -44,6 +47,8 @@ export function Intro() {
                   href={item.link}
                   key={item.name}
                   target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.label}
                 ></a>
               ))}
             </div>

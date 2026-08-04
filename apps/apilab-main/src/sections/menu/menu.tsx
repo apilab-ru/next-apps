@@ -70,7 +70,7 @@ export function Menu() {
           </a>
         ))}
       </div>
-      <div className="menu__language" aria-label="Language">
+      <div className="menu__language" role="group" aria-label="Language">
         <button
           className={`menu__language-option${language === 'ru' ? ' --active' : ''}`}
           type="button"

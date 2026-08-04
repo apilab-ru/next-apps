@@ -18,7 +18,15 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
   return (
     <article
       className="project-card"
+      role="button"
+      tabIndex={0}
       onClick={() => onOpen(project)}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          onOpen(project);
+        }
+      }}
       aria-label={translate(translations, 'detailsLabel', { title })}
     >
       <div className="project-card__image">

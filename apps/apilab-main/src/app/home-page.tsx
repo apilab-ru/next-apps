@@ -13,11 +13,13 @@ export function HomePage() {
     <div className={styles.page}>
       <Menu />
       <ScrollHashSync />
-      <Intro />
-      <About />
-      <Skills />
-      <Experience />
-      <Portfolio />
+      <main>
+        <Intro />
+        <About />
+        <Skills />
+        <Experience />
+        <Portfolio />
+      </main>
       <Footer />
     </div>
   );
