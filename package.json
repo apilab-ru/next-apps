@@ -2,7 +2,10 @@
   "name": "@next-apps/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:apilab-main": "nx build apilab-main",
+    "build:apilab-main:ssg": "node tools/build-apilab-main-ssg.mjs"
+  },
   "private": true,
   "devDependencies": {
     "@eslint/js": "^9.8.0",
