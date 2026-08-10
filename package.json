@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "apilab-main": "nx dev apilab-main",
     "build:apilab-main": "nx build apilab-main",
     "build:apilab-main:ssg": "node tools/build-apilab-main-ssg.mjs"
   },

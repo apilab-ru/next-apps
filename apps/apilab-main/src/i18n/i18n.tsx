@@ -5,6 +5,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useState,
   type ReactNode,
 } from 'react';
 
@@ -29,17 +30,16 @@ function getTranslationNode(
   messages: TranslationMessages,
   path: string,
 ): TranslationNode | undefined {
-  return path
-    .split('.')
-    .reduce<TranslationNode | undefined>((current, key) => {
-      if (!current || isTranslation(current)) return undefined;
-      if (Array.isArray(current)) return current[Number(key)];
-      return current[key];
-    }, messages);
+  return path.split('.').reduce<TranslationNode | undefined>((current, key) => {
+    if (!current || isTranslation(current)) return undefined;
+    if (Array.isArray(current)) return current[Number(key)];
+    return current[key];
+  }, messages);
 }
 
 interface I18nContextValue {
   language: Language;
+  setLanguage: (language: Language) => void;
   translate: (
     messages: TranslationMessages,
     key: string,
@@ -52,18 +52,30 @@ const I18nContext = createContext<I18nContextValue | null>(null);
 
 export function I18nProvider({
   children,
-  language,
+  language: initialLanguage,
 }: {
   children: ReactNode;
   language: Language;
 }) {
+  const [language, setLanguage] = useState(initialLanguage);
+
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
 
+  useEffect(() => {
+    const syncLanguageWithUrl = () => {
+      setLanguage(window.location.pathname === '/en' ? 'en' : 'ru');
+    };
+
+    window.addEventListener('popstate', syncLanguageWithUrl);
+    return () => window.removeEventListener('popstate', syncLanguageWithUrl);
+  }, []);
+
   const value = useMemo<I18nContextValue>(
     () => ({
       language,
+      setLanguage,
       translate: (messages, key, variables = {}) => {
         const node = getTranslationNode(messages, key);
         const message = node && isTranslation(node) ? node[language] : key;

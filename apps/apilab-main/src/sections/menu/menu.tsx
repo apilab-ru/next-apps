@@ -5,7 +5,6 @@ import { useDebouncedValue } from '@/hooks/use-debounced-value';
 import { useEffect, useState } from 'react';
 import { useI18n } from '@/i18n/i18n';
 import translations from './translations.json';
-import { useRouter } from 'next/navigation';
 
 const items = [
   { labelKey: 'about', path: 'intro', sections: ['intro', 'about'] },
@@ -19,8 +18,7 @@ function isActiveSection(sections: string[], active: string): boolean {
 }
 
 export function Menu() {
-  const { language, translate } = useI18n();
-  const router = useRouter();
+  const { language, setLanguage, translate } = useI18n();
   const t = (key: string) => translate(translations, key);
   const [currentSection, setCurrentSection] = useState('intro');
   const [activeSection, debounceActiveSection] = useDebouncedValue(
@@ -41,8 +39,16 @@ export function Menu() {
     };
   }, []);
 
-  const switchLanguage = (pathname: '/' | '/en') => {
-    router.push(`${pathname}${window.location.search}${window.location.hash}`);
+  const switchLanguage = (nextLanguage: 'ru' | 'en') => {
+    if (nextLanguage === language) return;
+
+    const pathname = nextLanguage === 'en' ? '/en' : '/';
+    window.history.pushState(
+      null,
+      '',
+      `${pathname}${window.location.search}${window.location.hash}`,
+    );
+    setLanguage(nextLanguage);
   };
 
   return (
@@ -74,7 +80,7 @@ export function Menu() {
         <button
           className={`menu__language-option${language === 'ru' ? ' --active' : ''}`}
           type="button"
-          onClick={() => switchLanguage('/')}
+          onClick={() => switchLanguage('ru')}
           aria-pressed={language === 'ru'}
           aria-label="Русский"
         >
@@ -83,7 +89,7 @@ export function Menu() {
         <button
           className={`menu__language-option${language === 'en' ? ' --active' : ''}`}
           type="button"
-          onClick={() => switchLanguage('/en')}
+          onClick={() => switchLanguage('en')}
           aria-pressed={language === 'en'}
           aria-label="English"
         >
