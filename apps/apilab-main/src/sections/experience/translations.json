@@ -10,33 +10,77 @@
       "company": { "ru": "Т Банк", "en": "T-Bank" },
       "position": { "ru": "Ведущий разработчик", "en": "Lead Developer" },
       "description": [
-        { "ru": "Разработка корпоративных банковских приложений.", "en": "Development of corporate banking applications." },
-        { "ru": "Проектирование и развитие архитектуры микрофронтендов на Angular и Nx.", "en": "Design and evolution of a microfrontend architecture with Angular and Nx." },
-        { "ru": "Разработка платформенных решений и внутренних библиотек.", "en": "Development of platform solutions and internal libraries." },
-        { "ru": "Реализация сложной бизнес-логики и динамических форм.", "en": "Implementation of complex business logic and dynamic forms." },
-        { "ru": "Техническое лидерство, код-ревью и менторство.", "en": "Technical leadership, code reviews, and mentoring." }
+        {
+          "ru": "Пришёл первым frontend-разработчиком в новую команду: заложил техническую основу frontend-проектов и настроил CI/CD.",
+          "en": "Joined a new team as its first frontend developer, establishing the technical foundation for frontend projects and setting up CI/CD."
+        },
+        {
+          "ru": "Совместно с аналитиками перенёс сложные бизнес-процессы с внешнего ПО на внутреннюю платформу — отдельные процессы ускорились до 5 раз.",
+          "en": "Worked with analysts to migrate complex business processes from external software to an internal platform, making some processes up to 5x faster."
+        },
+        {
+          "ru": "Разработал инструмент декларативного описания сложных форм и бизнес-правил, понятный не только разработчикам.",
+          "en": "Developed a tool for declaratively describing complex forms and business rules, making them understandable beyond the development team."
+        },
+        {
+          "ru": "Сформировал инженерные практики внутри новой команды: ревью технических спецификаций, code review, декларативный и реактивный подходы.",
+          "en": "Established engineering practices within the new team, including technical specification reviews, code reviews, and declarative and reactive approaches."
+        },
+        {
+          "ru": "Онбордил разработчиков и менторил стажёров, помогая им погружаться в продукт и технические решения.",
+          "en": "Onboarded developers and mentored interns, helping them understand the product and technical solutions."
+        }
       ]
     },
     "skillbox": {
       "company": { "ru": "SkillBox", "en": "SkillBox" },
       "position": { "ru": "Ведущий разработчик", "en": "Lead Developer" },
       "description": [
-        { "ru": "Разработка образовательной платформы.", "en": "Development of an educational platform." },
-        { "ru": "Проектирование и развитие фронтенд-архитектуры.", "en": "Design and evolution of the frontend architecture." },
-        { "ru": "Реализация сложных пользовательских сценариев.", "en": "Implementation of complex user flows." },
-        { "ru": "Оптимизация производительности и пользовательского опыта.", "en": "Performance and user experience optimization." },
-        { "ru": "Код-ревью и участие в технических решениях.", "en": "Code reviews and participation in technical decision-making." }
+        {
+          "ru": "Участвовал в адаптации B2C-платформы под B2B и запуске продукта для вузов.",
+          "en": "Contributed to adapting a B2C platform for B2B and launching the product for universities."
+        },
+        {
+          "ru": "Работал над архитектурой и реализацией white-label подхода для кастомизации тем, изображений и иконок под разные организации.",
+          "en": "Worked on the architecture and implementation of a white-label approach for customizing themes, images, and icons for different organizations."
+        },
+        {
+          "ru": "Участвовал в разработке новой административной панели с учётом сложных бизнес-правил и переиспользования существующих решений.",
+          "en": "Contributed to the development of a new administration panel supporting complex business rules while reusing existing solutions."
+        },
+        {
+          "ru": "Развивал UI-инфраструктуру платформы: разработал переиспользуемые компоненты, переработал структуру Storybook и внедрил Markdown-документацию.",
+          "en": "Improved the platform's UI infrastructure by developing reusable components, restructuring Storybook, and introducing Markdown-based documentation."
+        }
       ]
     },
     "skyeng": {
       "company": { "ru": "Skyeng", "en": "Skyeng" },
-      "position": { "ru": "Senior/Lead Developer", "en": "Senior/Lead Developer" },
+      "position": {
+        "ru": "Senior/Lead Developer",
+        "en": "Senior/Lead Developer"
+      },
       "description": [
-        { "ru": "Разработка новых продуктов и развитие существующих.", "en": "Development of new products and evolution of existing ones." },
-        { "ru": "Проектирование архитектуры и технических решений.", "en": "Architecture and technical solution design." },
-        { "ru": "Реализация сложной функциональности и проработка бизнес-требований.", "en": "Implementation of complex features and refinement of business requirements." },
-        { "ru": "Код-ревью, менторство и выступления на внутренних митапах.", "en": "Code reviews, mentoring, and presentations at internal meetups." },
-        { "ru": "Проведение собеседований и онбординг сотрудников.", "en": "Technical interviews and employee onboarding." }
+        {
+          "ru": "Лидировал команду из 8 разработчиков основного направления школы: за год запустили 3 новых продукта — короткие разговорные занятия, гибридные AI-уроки и массовые уроки.",
+          "en": "Led a team of 8 developers in the school's core business area, launching 3 new products within a year: short conversation sessions, hybrid AI-powered lessons, and large-group classes."
+        },
+        {
+          "ru": "Запускал продуктовые эксперименты через A/B-тесты: AI-помощник преподавателя, AR-маски и UI-улучшения; успешные решения повышали конверсию и становились частью продукта.",
+          "en": "Ran product experiments through A/B testing, including an AI teaching assistant, AR masks, and UI improvements; successful experiments increased conversion and became part of the product."
+        },
+        {
+          "ru": "Мигрировал Angular-монорепозиторий с v13 на v14: 100 приложений и 1000+ библиотек, устранил технические проблемы и координировал переход 12 команд.",
+          "en": "Migrated a large Angular monorepo from v13 to v14, covering 100 applications and 1,000+ libraries, resolving technical issues and coordinating the transition across 12 teams."
+        },
+        {
+          "ru": "Развивал архитектуру платформы под новые форматы уроков, включая кроссплатформенные субтитры с поддержкой Web, iOS и Android.",
+          "en": "Evolved the platform architecture to support new lesson formats, including cross-platform subtitles for Web, iOS, and Android."
+        },
+        {
+          "ru": "Развивал инженерные практики команды: проводил технические собеседования, менторил разработчиков и выступал на внутренних митапах.",
+          "en": "Developed the team's engineering practices through technical interviews, developer mentoring, and presentations at internal meetups."
+        }
       ]
     },
     "simbirsoft": {
@@ -51,19 +95,43 @@
       "company": { "ru": "Haulmont", "en": "Haulmont" },
       "position": { "ru": "Web Developer", "en": "Web Developer" },
       "description": [
-        { "ru": "Разработка многоцелевого веб-портала.", "en": "Development of a multipurpose web portal." },
-        { "ru": "Разработка CRM и проектирование её архитектуры.", "en": "CRM development and architecture design." },
-        { "ru": "Разработка компонентов UI-кита.", "en": "Development of UI kit components." }
+        {
+          "ru": "Был основным frontend-разработчиком новой CRM-платформы: участвовал в разработке с первых этапов до запуска и появления первых пользователей.",
+          "en": "Served as the primary frontend developer for a new CRM platform, contributing from the early development stages through launch and onboarding of the first users."
+        },
+        {
+          "ru": "Разрабатывал на Angular переиспользуемые UI-компоненты и продуктовые страницы, для части функциональности также реализовал backend API на CUBA Platform.",
+          "en": "Developed reusable UI components and product pages with Angular, and implemented backend APIs with CUBA Platform for selected features."
+        },
+        {
+          "ru": "Подключился к разработке крупного веб-портала на финальном этапе: закрывал сложные UI-задачи и критичные баги, помогая команде завершить проект в срок.",
+          "en": "Joined the development of a large web portal at its final stage, tackling complex UI tasks and critical bugs to help the team deliver the project on time."
+        }
       ]
     },
     "intrum": {
       "company": { "ru": "Intrum CRM", "en": "Intrum CRM" },
-      "position": { "ru": "Fullstack Web Developer", "en": "Full-stack Web Developer" },
+      "position": {
+        "ru": "Fullstack Web Developer",
+        "en": "Full-stack Web Developer"
+      },
       "description": [
-        { "ru": "Разработка CRM-системы Intrum и внутренних веб-приложений.", "en": "Development of the Intrum CRM system and internal web applications." },
-        { "ru": "Реализация и развитие функциональности.", "en": "Implementation and evolution of product functionality." },
-        { "ru": "Оптимизация кода, архитектуры, бд под большие данные и нагрузку.", "en": "Optimization of code, architecture, and databases for large datasets and high load." },
-        { "ru": "Разработка микросервисов и интеграций с внешними API.", "en": "Development of microservices and integrations with external APIs." }
+        {
+          "ru": "Переработал архитектуру существующей CRM: разделил представление, бизнес-логику и контроллеры и последовательно рефакторил legacy-код.",
+          "en": "Refactored the existing CRM architecture by separating presentation, business logic, and controllers, while progressively improving the legacy codebase."
+        },
+        {
+          "ru": "Разработал и оптимизировал сложный поиск по базе с 10+ млн записей, используя декомпозицию запросов, временные таблицы и другие оптимизации.",
+          "en": "Developed and optimized complex search across a database with 10M+ records using query decomposition, temporary tables, and other performance optimizations."
+        },
+        {
+          "ru": "Разработал интеграцию CRM-чата с несколькими мессенджерами и социальными сетями, включая Telegram, WhatsApp, Viber, VK и Facebook.",
+          "en": "Developed CRM chat integrations with multiple messaging and social platforms, including Telegram, WhatsApp, Viber, VK, and Facebook."
+        },
+        {
+          "ru": "Разрабатывал внутренние приложения CRM, включая сервис SMS/email-рассылок с несколькими провайдерами и дашбордами статистики.",
+          "en": "Developed internal CRM applications, including an SMS/email messaging service with multiple provider integrations and analytics dashboards."
+        }
       ]
     },
     "parusMedia": {

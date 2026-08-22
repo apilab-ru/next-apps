@@ -223,6 +223,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     href: 'https://time.apilab.ru/',
     githubHref: 'https://github.com/apilab-ru/frontend-monorepo',
   },
+  /*
   {
     id: 'films',
     title: 'Список фильмов',
@@ -261,6 +262,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       },
     ],
   },
+  */
   {
     id: 'slider',
     title: 'Многоуровневый слайдер',
@@ -276,7 +278,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     href: 'https://diagram.apilab.ru/',
   },
-  {
+  /*{
     id: 'bouquet-editor',
     title: 'Редактор букетов',
     description: 'VK-приложение для интерактивного составления букета.',
@@ -318,7 +320,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       { text: 'Корпоративный портал компании на PHP и Smarty.' },
       { image: '/img/projects/details/ssk63/main.jpg' },
     ],
-  },
+  },*/
 ];
 
 export const PORTFOLIO_PREVIEW_COUNT = 3;
