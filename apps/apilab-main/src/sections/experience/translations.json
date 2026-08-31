@@ -11,8 +11,8 @@
       "position": { "ru": "Ведущий разработчик", "en": "Lead Developer" },
       "description": [
         {
-          "ru": "Пришёл первым frontend-разработчиком в новую команду: заложил техническую основу frontend-проектов и настроил CI/CD.",
-          "en": "Joined a new team as its first frontend developer, establishing the technical foundation for frontend projects and setting up CI/CD."
+          "ru": "С нуля выстроил frontend-направление в новой команде: заложил техническую основу проектов и настроил CI/CD.",
+          "en": "Built the frontend function from the ground up in a new team, establishing the technical foundation for frontend projects and setting up CI/CD."
         },
         {
           "ru": "Совместно с аналитиками перенёс сложные бизнес-процессы с внешнего ПО на внутреннюю платформу — отдельные процессы ускорились до 5 раз.",

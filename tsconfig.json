@@ -4,9 +4,6 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/apilab-main-e2e"
-    },
-    {
       "path": "./apps/apilab-main"
     }
   ]

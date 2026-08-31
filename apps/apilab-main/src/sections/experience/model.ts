@@ -10,7 +10,7 @@ const EXP: ExpItem[] = [
     id: 'tbank',
     logo: '/img/companies/tbank.png',
     from: '2024-07-01',
-    to: null,
+    to: '2026-08-27',
   },
   {
     id: 'skillbox',
