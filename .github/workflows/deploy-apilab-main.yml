@@ -1,0 +1,94 @@
+name: Build and deploy apilab-main
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'apps/apilab-main/**'
+      - 'tools/build-apilab-main-ssg.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'nx.json'
+      - 'tsconfig*.json'
+      - '.github/workflows/deploy-apilab-main.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: apilab-main-production
+  cancel-in-progress: true
+
+env:
+  ARTIFACT_NAME: apilab-main-ssg
+
+jobs:
+  build:
+    name: Build SSG artifact
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build:apilab-main:ssg
+
+      - name: Upload static export
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: apps/apilab-main/out/
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    name: Deploy over FTP
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+
+    steps:
+      - name: Download static export
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: artifact
+
+      - name: Install FTP client
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes lftp
+
+      - name: Upload artifact without deleting remote files
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_TARGET_DIR: ${{ secrets.FTP_TARGET_DIR }}
+        run: |
+          test -n "$FTP_SERVER"
+          test -n "$FTP_USERNAME"
+          test -n "$FTP_PASSWORD"
+          test -n "$FTP_TARGET_DIR"
+          case "$FTP_TARGET_DIR" in
+            /*) ;;
+            *) echo "FTP_TARGET_DIR must be an absolute FTP path" >&2; exit 1 ;;
+          esac
+          lftp \
+            --user "$FTP_USERNAME,$FTP_PASSWORD" \
+            "$FTP_SERVER" \
+            --execute "set cmd:fail-exit yes; set ftp:ssl-allow no; mirror --reverse --verbose --parallel=4 artifact/ \"$FTP_TARGET_DIR\"; bye"
