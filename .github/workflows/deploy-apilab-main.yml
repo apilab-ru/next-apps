@@ -103,6 +103,6 @@ jobs:
           set ftp:ssl-allow no
           open -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER"
           cls -1 "$FTP_TARGET_DIR"
-          mirror --reverse --delete --verbose --parallel=4 artifact/ "$FTP_TARGET_DIR"
+          mirror --reverse --delete --no-perms --verbose --parallel=1 artifact/ "$FTP_TARGET_DIR"
           bye
           EOF
