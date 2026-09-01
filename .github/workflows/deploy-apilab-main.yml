@@ -52,7 +52,7 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
           path: apps/apilab-main/out/
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 1
 
   deploy:
     name: Deploy over FTP
@@ -73,7 +73,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install --yes lftp
 
-      - name: Upload artifact without deleting remote files
+      - name: Synchronize artifact and delete stale remote files
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -88,7 +88,13 @@ jobs:
             /*) ;;
             *) echo "FTP_TARGET_DIR must be an absolute FTP path" >&2; exit 1 ;;
           esac
+          case "${FTP_TARGET_DIR%/}" in
+            ""|/|/var|/var/www)
+              echo "Refusing unsafe FTP_TARGET_DIR: $FTP_TARGET_DIR" >&2
+              exit 1
+              ;;
+          esac
           lftp \
             --user "$FTP_USERNAME,$FTP_PASSWORD" \
             "$FTP_SERVER" \
-            --execute "set cmd:fail-exit yes; set ftp:ssl-allow no; mirror --reverse --verbose --parallel=4 artifact/ \"$FTP_TARGET_DIR\"; bye"
+            --execute "set cmd:fail-exit yes; set ftp:ssl-allow no; mirror --reverse --delete --verbose --parallel=4 artifact/ \"$FTP_TARGET_DIR\"; bye"
