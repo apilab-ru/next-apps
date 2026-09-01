@@ -101,7 +101,7 @@ jobs:
           set net:max-retries 2
           set net:reconnect-interval-base 5
           set ftp:ssl-allow no
-          open --user "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER"
+          open -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER"
           cls -1 "$FTP_TARGET_DIR"
           mirror --reverse --delete --verbose --parallel=4 artifact/ "$FTP_TARGET_DIR"
           bye
