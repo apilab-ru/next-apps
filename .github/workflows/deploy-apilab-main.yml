@@ -103,6 +103,11 @@ jobs:
           set ftp:ssl-allow no
           open -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER"
           cls -1 "$FTP_TARGET_DIR"
-          mirror --reverse --delete --no-perms --verbose --parallel=1 artifact/ "$FTP_TARGET_DIR"
+          mirror --reverse --no-perms --verbose --parallel=1 artifact/ "$FTP_TARGET_DIR"
+          set cmd:fail-exit no
+          mirror --reverse --delete --no-perms --parallel=1 artifact/ "$FTP_TARGET_DIR"
+          set cmd:fail-exit yes
+          get "$FTP_TARGET_DIR/index.html" -o /tmp/apilab-deployed-index.html
           bye
           EOF
+          cmp --silent artifact/index.html /tmp/apilab-deployed-index.html
