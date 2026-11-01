@@ -75,6 +75,10 @@ body {
   margin: 12px 0;
   position: relative;
 
+  @media (max-width: 1400px) and (min-width: 900px) {
+    margin-left: 52px;
+  }
+
   &:after {
     content: '';
     display: block;
