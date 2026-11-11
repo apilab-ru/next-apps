@@ -8,6 +8,7 @@ export interface PortfolioProject {
   details: PortfolioProjectDetail[];
   href?: string;
   githubHref?: string;
+  swaggerHref?: string;
 }
 
 export interface PortfolioProjectDetail {
@@ -57,6 +58,34 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     href: 'https://bsab.apilab.ru/',
     githubHref: 'https://github.com/apilab-ru/bsab',
+    swaggerHref: 'https://api.apilab.ru/bsab/swagger#/',
+  },
+  {
+    id: 'json-editor',
+    title: 'JSON Editor',
+    description: 'Редактор JSON с навигацией по вложенным данным и локальным хранением файлов.',
+    image: '/img/projects/details/json-editor/browse.jpg',
+    stack: ['Angular', 'TypeScript', 'IndexedDB', 'SCSS'],
+    date: '2023-01-28',
+    details: [
+      {
+        text: 'Браузерный редактор JSON для просмотра и изменения объектов и массивов любой вложенности. Размер данных ограничен доступной оперативной памятью. Файлы хранятся локально в IndexedDB.',
+      },
+      {
+        text: 'Открытие JSON-файла с устройства или встроенного примера для знакомства с редактором.',
+        image: '/img/projects/details/json-editor/main.jpg',
+      },
+      {
+        text: 'Навигация по вложенной структуре в колонках, путь к выбранному объекту и поиск по ключам и значениям.',
+        image: '/img/projects/details/json-editor/browse.jpg',
+      },
+      {
+        text: 'Редактирование значений, объектов и массивов, переименование полей, сохранение изменений в локальном рабочем пространстве и выгрузка в файл.',
+        image: '/img/projects/details/json-editor/edit.jpg',
+      },
+    ],
+    href: 'https://json.apilab.ru',
+    githubHref: 'https://github.com/apilab-ru/frontend-monorepo',
   },
   {
     id: 'worklog-analyze',
@@ -110,6 +139,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       },
     ],
     githubHref: 'https://github.com/apilab-ru/frontend-monorepo',
+    swaggerHref: 'https://api.apilab.ru/file-cab/swagger#/',
   },
   {
     id: 'record',

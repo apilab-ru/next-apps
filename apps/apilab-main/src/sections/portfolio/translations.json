@@ -68,6 +68,42 @@
         }
       ]
     },
+    "json-editor": {
+      "title": {
+        "ru": "JSON Editor",
+        "en": "JSON Editor"
+      },
+      "description": {
+        "ru": "Редактор JSON с навигацией по вложенным данным и локальным хранением файлов.",
+        "en": "A JSON editor with nested data navigation and local file storage."
+      },
+      "details": [
+        {
+          "text": {
+            "ru": "Браузерный редактор JSON для просмотра и изменения объектов и массивов любой вложенности. Размер данных ограничен доступной оперативной памятью. Файлы хранятся локально в IndexedDB.",
+            "en": "A browser-based JSON editor for exploring and editing objects and arrays at any nesting depth. Data size is limited by available RAM. Files are stored locally in IndexedDB."
+          }
+        },
+        {
+          "text": {
+            "ru": "Открытие JSON-файла с устройства или встроенного примера для знакомства с редактором.",
+            "en": "Open a JSON file from your device or try the built-in example to explore the editor."
+          }
+        },
+        {
+          "text": {
+            "ru": "Навигация по вложенной структуре в колонках, путь к выбранному объекту и поиск по ключам и значениям.",
+            "en": "Browse nested data in columns, follow the path to the selected object, and search keys and values."
+          }
+        },
+        {
+          "text": {
+            "ru": "Редактирование значений, объектов и массивов, переименование полей, сохранение изменений в локальном рабочем пространстве и выгрузка в файл.",
+            "en": "Edit values, objects, and arrays, rename fields, save changes in the local workspace, and export to a file."
+          }
+        }
+      ]
+    },
     "worklog-analyze": {
       "title": {
         "ru": "Worklog Analyze",
