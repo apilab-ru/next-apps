@@ -17,7 +17,7 @@ export interface PortfolioProjectDetail {
 }
 
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
-  {
+  /*{
     id: 'portfolio',
     title: 'Personal Portfolio',
     description: 'Персональный двуязычный лендинг-портфолио.',
@@ -31,7 +31,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       },
     ],
     githubHref: 'https://github.com/apilab-ru/next-apps',
-  },
+  },*/
   {
     id: 'bsab',
     title: 'React/Nest Parser',
