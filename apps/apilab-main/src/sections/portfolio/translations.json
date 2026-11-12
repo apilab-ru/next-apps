@@ -122,14 +122,26 @@
         },
         {
           "text": {
-            "ru": "Настройка экспорта и импорт данных в нужный формат.",
-            "en": "Export configuration and data import in the required format."
+            "ru": "Настройка экспорта и импорт данных в нужный формат. Светлая тема.",
+            "en": "Export configuration and data import in the required format. Light theme."
           }
         },
         {
           "text": {
-            "ru": "Анализ данных с настраиваемыми правилами группировки.",
-            "en": "Data analysis with configurable grouping rules."
+            "ru": "Анализ данных с настраиваемыми правилами группировки. Светлая тема.",
+            "en": "Data analysis with configurable grouping rules. Light theme."
+          }
+        },
+        {
+          "text": {
+            "ru": "Настройка экспорта и импорт данных в нужный формат. Тёмная тема.",
+            "en": "Export configuration and data import in the required format. Dark theme."
+          }
+        },
+        {
+          "text": {
+            "ru": "Анализ данных с настраиваемыми правилами группировки. Тёмная тема.",
+            "en": "Data analysis with configurable grouping rules. Dark theme."
           }
         }
       ]

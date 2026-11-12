@@ -99,12 +99,20 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         text: 'Приложение для анализа рабочего времени, экспортированного из Jira.',
       },
       {
-        text: 'Настройка экспорта и импорт данных в нужный формат.',
+        text: 'Настройка экспорта и импорт данных в нужный формат. Светлая тема.',
         image: '/img/projects/details/worklog-analyze/help.jpg',
       },
       {
-        text: 'Анализ данных с настраиваемыми правилами группировки.',
+        text: 'Анализ данных с настраиваемыми правилами группировки. Светлая тема.',
         image: '/img/projects/details/worklog-analyze/main.jpg',
+      },
+      {
+        text: 'Настройка экспорта и импорт данных в нужный формат. Тёмная тема.',
+        image: '/img/projects/details/worklog-analyze/help-dark.jpg',
+      },
+      {
+        text: 'Анализ данных с настраиваемыми правилами группировки. Тёмная тема.',
+        image: '/img/projects/details/worklog-analyze/main-dark.jpg',
       },
     ],
     href: 'https://worklog-analyze.apilab.ru/',
